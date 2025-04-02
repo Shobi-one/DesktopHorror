@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lost Media Hunters - Rare Game Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .thread-container {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .thread-title {
+            font-size: 24px;
+            color: #1a1a1a;
+            border-bottom: 2px solid #4a4a4a;
+            padding-bottom: 10px;
+        }
+        .user-post {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+        .username {
+            font-weight: bold;
+            color: #2a6496;
+        }
+        .timestamp {
+            color: #777;
+            font-size: 0.9em;
+        }
+        .post-content {
+            margin-top: 10px;
+        }
+        .evidence-link {
+            color: #337ab7;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .verification-section {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .download-warning {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="thread-container">
+        <h1 class="thread-title">Seeking: Forgotten childhood game from early 2000s "Find our Friends"</h1>
+        
+        <div class="user-post">
+            <div class="username">GameArcheologist</div>
+            <div class="timestamp">Posted: September 5, 2011 at 2:37 AM</div>
+            
+            <div class="post-content">
+                <p>Okay, lost media hunters, I need your help. I'm searching for an game i used game that supposedly circulated in very limited indie circles around 2003-2004.</p>
+                
+                <p>What I know so far:</p>
+                <ul>
+                    <li>Title: "PHANTOM SIGNAL"</li>
+                    <li>Rumored to be developed by an underground game dev collective</li>
+                    <li>Supposedly an experimental psychological horror game</li>
+                    <li>Only a handful of copies ever existed</li>
+                </ul>
+
+                <p>I've found fragmented references, but no complete download. Someone must have an archive somewhere...</p>
+
+                <img src="/api/placeholder/600/400" alt="Blurry Screenshot" class="screenshot">
+            </div>
+        </div>
+
+        <div class="user-post">
+            <div class="username">RetroGamerX</div>
+            <div class="timestamp">Posted: September 5, 2011 at 3:12 AM</div>
+            
+            <div class="post-content">
+                <p>I remember hearing rumors about this game on some old IRC channels. People said it was "more than just a game" - whatever that means.</p>
+                
+                <p>Evidence I've collected:</p>
+                <ul>
+                    <li class="evidence-link" onclick="showHiddenContent('dev-log')">Partial Developer Log</li>
+                    <li class="evidence-link" onclick="showHiddenContent('forum-post')">Old Forum Discussion</li>
+                    <li class="evidence-link" onclick="showHiddenContent('leak-info')">Leaked Information Fragment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="verification-section">
+            <h3>Game Download Verification</h3>
+            <p>To access the game files, you must:</p>
+            <ol>
+                <li>Collect clues from the evidence links</li>
+                <li>Piece together the verification code</li>
+                <li>Enter the code below</li>
+            </ol>
+
+            <input type="text" id="verification-code" placeholder="Enter Verification Code">
+            <button onclick="verifyCode()">Verify</button>
+            <p id="verification-result"></p>
+        </div>
+
+        <div class="download-warning">
+            WARNING: Downloading unknown game files can be risky. Use a sandboxed environment.
+        </div>
+    </div>
+
+    <script>
+        const evidenceContents = {
+            'dev-log': `Fragmented dev notes mention an "echo protocol" in game mechanics. Cryptic reference to player interactions.`,
+            'forum-post': `Old forum thread hints at a "phantom" game mechanic that changes with each playthrough.`,
+            'leak-info': `Partial leak suggests the game has adaptive narrative technology beyond typical game design.`
+        };
+
+        function showHiddenContent(type) {
+            alert(evidenceContents[type]);
+        }
+
+        function verifyCode() {
+            const code = document.getElementById('verification-code').value.toLowerCase().trim();
+            const resultElement = document.getElementById('verification-result');
+
+            if (code === 'echo_phantom_protocol') {
+                resultElement.innerHTML = 'VERIFICATION SUCCESSFUL! Preparing game download...';
+                setTimeout(() => {
+                    alert('Download initialized. Proceed with caution.');
+                }, 2000);
+            } else {
+                resultElement.innerHTML = 'Verification failed. Keep searching for clues.';
+            }
+        }
+    </script>
+</body>
+</html>
